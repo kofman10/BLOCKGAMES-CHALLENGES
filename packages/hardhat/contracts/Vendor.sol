@@ -21,7 +21,7 @@ uint256 public constant tokensPerEth = 100;
       function buyTokens() public payable {
           require(msg.value > 0, "The value is must be greater than 0");
 
-          uint256 amtToTransfer =msg.value * tokensPerEth;
+          uint256 amtToTransfer = msg.value * tokensPerEth;
           yourToken.transfer(msg.sender, amtToTransfer);
           emit BuyTokens(msg.sender, msg.value, amtToTransfer);
       }
